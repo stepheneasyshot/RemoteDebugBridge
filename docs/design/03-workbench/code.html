@@ -1,0 +1,447 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary":"#003640","surface-container-low":"#131b2e","inverse-primary":"#006c49","secondary-fixed":"#acedff","error-container":"#93000a","primary":"#4edea3","on-primary-fixed-variant":"#005236","on-surface":"#dae2fd","on-tertiary":"#1000a9","tertiary-fixed-dim":"#c0c1ff","surface-variant":"#2d3449","on-secondary-container":"#00424e","outline":"#86948a","surface-container-highest":"#2d3449","inverse-surface":"#dae2fd","on-background":"#dae2fd","on-primary-fixed":"#002113","on-tertiary-container":"#1d17b2","on-tertiary-fixed":"#07006c","on-secondary-fixed-variant":"#004e5c","surface-container-high":"#222a3d","surface":"#0b1326","on-tertiary-fixed-variant":"#2f2ebe","on-error":"#690005","tertiary-container":"#9699ff","secondary":"#4cd7f6","secondary-container":"#03b5d3","primary-fixed":"#6ffbbe","primary-container":"#10b981","surface-container-lowest":"#060e20","surface-bright":"#31394d","tertiary-fixed":"#e1e0ff","on-primary":"#003824","secondary-fixed-dim":"#4cd7f6","outline-variant":"#3c4a42","background":"#0b1326","surface-tint":"#4edea3","surface-dim":"#0b1326","primary-fixed-dim":"#4edea3","inverse-on-surface":"#283044","on-error-container":"#ffdad6","tertiary":"#c0c1ff","on-surface-variant":"#bbcabf","on-secondary-fixed":"#001f26","surface-container":"#171f33","on-primary-container":"#00422b","error":"#ffb4ab"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-md":"0.75rem","space-xs":"0.25rem","space-xl":"1.5rem","margin":"1rem","gutter":"0.75rem","space-sm":"0.5rem"},"fontFamily":{"headline-xl":["Geist"],"label-caps":["Geist"],"body-md":["Inter"],"headline-md":["Geist"],"body-lg":["Inter"],"code-md":["JetBrains Mono"],"code-lg":["JetBrains Mono"],"code-sm":["JetBrains Mono"],"body-sm":["Inter"],"headline-lg":["Geist"]},"fontSize":{"headline-xl":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.025em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"headline-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["0.9375rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"code-md":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"code-lg":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"500"}],"code-sm":["0.6875rem",{"lineHeight":"1rem","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"headline-lg":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md"><div class="h-16 w-full px-space-md flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-3 h-3 rounded-full bg-error/80"></div><div class="w-3 h-3 rounded-full bg-secondary/80"></div><div class="w-3 h-3 rounded-full bg-primary/80"></div></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="DroidCraft ADB Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB2Sna9M441eQANnpc4FuWOJXtNLJuYOBefMwW3-fhv9-UkLvbkjQ3xr_mEpQUwwRl4FGtblw2FrXWb3WqYbOLy7_fkgWluWoRgdLdZFpdifQHK8RBg41vO_i5OOv5sR-DgtAUthThJZh8CyPaxw3IAdX2s8B0rYQNLutl-0wOS1nceQH5TwxxXenMiDrF-y8qzNxR-zRGOSJ-uAIQz8ZQkvRz6zYPzGMKINrOrDcM"><span class="font-code-md text-code-md text-on-surface tracking-tight font-semibold">DroidCraft Studio</span><span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded">ADB Companion v2.4.0</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><span class="font-code-sm text-code-sm text-primary">Daemon: Running (Port 5037)</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="font-body-sm text-body-sm px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-colors" data-path="welcome-guide" href="#">1. 欢迎指引 (Welcome)</a><a class="font-body-sm text-body-sm px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-colors" data-path="device-manager" href="#">2. 设备管理 (Devices)</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-surface-container-high text-primary font-semibold" data-path="debugging-workbench" href="#">3. 调试工作台 (Workbench)</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded"><span class="material-symbols-outlined text-secondary text-[16px]">smartphone</span><span class="font-code-sm text-code-sm text-on-surface">Pixel 8 Pro (USB)</span><span class="material-symbols-outlined text-on-surface-variant text-[14px]">expand_more</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-8 w-64 bg-surface-container-low z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Active Device Target</span><div class="flex items-center justify-between mt-space-xs p-space-sm rounded bg-surface-container"><div class="flex flex-col"><span class="font-code-md text-code-md text-on-surface font-semibold">google-pixel_8</span><span class="font-code-sm text-code-sm text-on-surface-variant">192.168.1.104:5555</span></div><span class="font-code-sm text-code-sm text-primary bg-surface-container-high px-space-xs py-0.5 rounded">ONLINE</span></div></div><div class="px-space-sm pt-space-xs"><span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">ADB Orchestration</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="welcome-guide" href="#"><span class="material-symbols-outlined text-[18px]">auto_stories</span><span class="font-body-sm text-body-sm">Onboarding &amp; Setup</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="device-manager" href="#"><span class="material-symbols-outlined text-[18px]">devices</span><span class="font-body-sm text-body-sm">Connected Targets</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="debugging-workbench" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-body-sm text-body-sm">Console &amp; Logcat</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="apk-installer" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span><span class="font-body-sm text-body-sm">Package Sideload</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="file-browser" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span class="font-body-sm text-body-sm">File System Pull/Push</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="screen-mirror" href="#"><span class="material-symbols-outlined text-[18px]">screenshot_monitor</span><span class="font-body-sm text-body-sm">Scrcpy Cast Stream</span></a></nav></div><div class="px-space-sm flex flex-col gap-space-xs"><div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between text-code-sm font-code-sm text-on-surface-variant"><span>Daemon CPU</span><span class="text-primary">1.2%</span></div><div class="flex items-center justify-between text-code-sm font-code-sm text-on-surface-variant"><span>Sync Queue</span><span class="text-secondary">Idle (0)</span></div></div></div></aside><div class="pl-64"><main class="relative pt-16 pb-8 min-h-screen bg-surface w-full"><div class="flex flex-col w-full">
+<div class="w-full px-space-md py-space-sm flex items-center justify-between bg-surface-container-lowest border-b border-surface-variant/30"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container"><span class="material-symbols-outlined text-[16px] text-primary">terminal</span><span class="font-code-md text-code-md text-on-surface font-semibold">Pixel 8 Pro</span><span class="font-code-sm text-code-sm text-outline">|</span><span class="font-code-sm text-code-sm text-secondary">Physical USB 3.2 Gen2</span></div><div class="flex items-center gap-space-xs text-code-sm font-code-sm text-on-surface-variant bg-surface-container-low px-3 py-1.5 rounded-full"><span>Display:</span><span class="text-primary font-semibold" id="top-resolution-readout">1080x2400 @ 440dpi</span></div><div class="flex items-center gap-space-xs text-code-sm font-code-sm text-on-surface-variant bg-surface-container-low px-3 py-1.5 rounded-full"><span>Fold State:</span><span class="text-secondary" id="top-fold-readout">Standard (Flat 180°)</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container text-code-sm font-code-sm"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><span class="text-on-surface">Scrcpy v2.4 Native Mirror</span><span class="text-primary font-semibold ml-1">60.2 FPS</span></div><button class="flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface text-body-sm font-body-sm transition-colors" onclick="executeGenericCmd('adb reboot', 'Rebooting target device via ADB')"><span class="material-symbols-outlined text-[16px] text-error">restart_alt</span><span>Reboot Device</span></button><button class="flex items-center gap-space-xs px-4 py-1.5 rounded-full bg-primary text-on-primary text-body-sm font-body-sm font-semibold hover:opacity-90 transition-opacity shadow-sm" onclick="resetAllOverrides()"><span class="material-symbols-outlined text-[16px]">sync_saved_locally</span><span>一键重置全系统模拟</span></button></div></div>
+<div class="grid grid-cols-12 gap-space-md p-space-md w-full items-start">
+<div class="col-span-12 xl:col-span-5 flex flex-col gap-space-md max-h-[calc(100vh-140px)] overflow-y-auto pr-1">
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">tune</span></div><h2 class="font-headline-md text-headline-md text-on-surface">高频硬件与系统事件模拟</h2></div><span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-outline">input keyevent</span></div><div class="grid grid-cols-3 gap-2 mt-space-xs"><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(224, 'Wake Screen (亮屏)')"><div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-primary">light_mode</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">亮屏</span><span class="font-code-sm text-code-sm text-outline">key 224</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(223, 'Sleep Screen (锁屏)')"><div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">bedtime</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">锁屏/休眠</span><span class="font-code-sm text-code-sm text-outline">key 223</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(26, 'Power Click (电源键)')"><div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-secondary">power_settings_new</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">电源键点击</span><span class="font-code-sm text-code-sm text-outline">key 26</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerLongPower()"><div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-secondary">timer_10</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">长按电源键</span><span class="font-code-sm text-code-sm text-outline">--longpress 26</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(3, 'Home Screen (回到桌面)')"><div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-primary">circle</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">回到桌面</span><span class="font-code-sm text-code-sm text-outline">key 3</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(187, 'Recent Tasks (最近任务)')"><div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-primary">crop_square</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">最近任务</span><span class="font-code-sm text-code-sm text-outline">key 187</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(24, 'Volume Up (音量加)')"><div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-on-surface">volume_up</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">音量加 (+)</span><span class="font-code-sm text-code-sm text-outline">key 24</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(25, 'Volume Down (音量减)')"><div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-on-surface">volume_down</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">音量减 (-)</span><span class="font-code-sm text-code-sm text-outline">key 25</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerKeyevent(164, 'Mute Audio (静音)')"><div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">volume_off</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">全局静音</span><span class="font-code-sm text-code-sm text-outline">key 164</span></button><button class="col-span-2 flex items-center justify-center gap-space-sm p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerScreenshot()"><div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-primary">screenshot</span></div><div class="flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-medium">屏幕截图 (Screencap)</span><span class="font-code-sm text-code-sm text-outline">screencap -p /sdcard/</span></div></button><button class="col-span-1 flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group" onclick="triggerNotificationExpand()"><div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px] text-secondary">notifications_active</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1.5 font-medium">展开通知栏</span><span class="font-code-sm text-code-sm text-outline">statusbar expand</span></button></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[20px]">swipe_vertical</span></div><h2 class="font-headline-md text-headline-md text-on-surface">滑动手势模拟控制</h2></div><span class="font-code-sm text-code-sm text-primary px-2.5 py-0.5 rounded-full bg-surface-container-high font-semibold">WM Size Auto Detect</span></div><div class="p-space-sm rounded-2xl bg-surface-container mt-space-xs flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">底部上滑 (先取屏幕高度WM Size，由底向上注入手势)</span><span class="font-code-sm text-code-sm text-primary px-2.5 py-0.5 rounded-full bg-surface-container-high font-semibold">高度: 2400px</span></div><div class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-lowest p-2 rounded-xl flex items-center justify-between"><span>adb shell input swipe 540 2350 540 1200 250</span><span class="text-secondary font-semibold">250ms</span></div><button class="mt-space-xs w-full py-2.5 px-space-md rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-space-xs hover:opacity-90 transition-opacity shadow-sm" onclick="triggerBottomSwipeUp()"><span class="material-symbols-outlined text-[18px]">vertical_align_top</span><span>触发底部上滑 (返回桌面/上滑手势)</span></button></div><div class="mt-space-sm p-space-sm rounded-2xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">内容区域常规上滑 (列表/内容滚动模拟)</span><span class="font-code-sm text-code-sm text-outline">input swipe 540 Y1 540 Y2</span></div><div class="grid grid-cols-3 gap-2 mt-space-xs"><button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all" onclick="triggerContentSwipe('short')"><span class="font-body-sm text-body-sm text-on-surface font-medium">短滑 (Short)</span><span class="font-code-sm text-code-sm text-outline">300px / 200ms</span></button><button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all" onclick="triggerContentSwipe('medium')"><span class="font-body-sm text-body-sm text-primary font-medium">中滑 (Medium)</span><span class="font-code-sm text-code-sm text-outline">800px / 300ms</span></button><button class="flex flex-col items-center justify-center py-2.5 px-2 rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all" onclick="triggerContentSwipe('fling')"><span class="font-body-sm text-body-sm text-secondary font-medium">惯性长滑 (Fling)</span><span class="font-code-sm text-code-sm text-outline">1400px / 150ms</span></button></div></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">swipe_left_alt</span></div><h2 class="font-headline-md text-headline-md text-on-surface">侧边向内滑动返回 (Edge Inward Back)</h2></div><span class="font-code-sm text-code-sm text-outline px-2.5 py-0.5 rounded-full bg-surface-container-high">System Gestures</span></div><div class="grid grid-cols-2 gap-space-sm mt-space-xs"><div class="p-space-sm rounded-2xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">左侧向内滑 (Left Edge)</span><div class="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-[16px] text-secondary">arrow_forward</span></div></div><div class="font-code-sm text-code-sm text-outline">X: 10 -&gt; 450 (Y: 1200)</div><div class="flex items-center gap-2 mt-1"><button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface text-body-sm font-body-sm font-medium transition-colors" onclick="triggerEdgeBack('left', 1)">单次返回</button><button class="py-1.5 px-3 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-code-sm text-code-sm font-semibold transition-colors" onclick="triggerEdgeBack('left', 3)">连击 x3</button></div></div><div class="p-space-sm rounded-2xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">右侧向内滑 (Right Edge)</span><div class="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-[16px] text-secondary">arrow_back</span></div></div><div class="font-code-sm text-code-sm text-outline">X: 1070 -&gt; 630 (Y: 1200)</div><div class="flex items-center gap-2 mt-1"><button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface text-body-sm font-body-sm font-medium transition-colors" onclick="triggerEdgeBack('right', 1)">单次返回</button><button class="py-1.5 px-3 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-code-sm text-code-sm font-semibold transition-colors" onclick="triggerEdgeBack('right', 3)">连击 x3</button></div></div></div><div class="mt-space-sm flex items-center justify-between p-2 px-space-sm rounded-full bg-surface-container"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-outline">fast_forward</span><span class="font-body-sm text-body-sm text-on-surface-variant">快速多次返回连击间隔配置:</span></div><div class="flex items-center gap-1 font-code-sm text-code-sm"><span class="text-primary font-semibold">120ms</span><span class="text-outline">/ burst step</span></div></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[20px]">screen_rotation</span></div><h2 class="font-headline-md text-headline-md text-on-surface">屏幕方向与旋转控制</h2></div><span class="font-code-sm text-code-sm text-outline px-2.5 py-0.5 rounded-full bg-surface-container-high">user_rotation</span></div><div class="grid grid-cols-4 gap-2 mt-space-xs"><button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setOrientation(0, '0° Portrait (竖屏)')"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-primary">stay_current_portrait</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1">竖屏 0°</span></button><button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setOrientation(1, '90° Landscape (顺时针)')"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">stay_current_landscape</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1">顺时针 90°</span></button><button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setOrientation(2, '180° Inverted Portrait (反向竖屏)')"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">screen_lock_rotation</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1">反向 180°</span></button><button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setOrientation(3, '270° Landscape (逆时针)')"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">crop_rotate</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1">逆时针 270°</span></button></div><div class="mt-space-sm flex items-center justify-between"><label class="flex items-center gap-space-xs cursor-pointer"><input checked="" class="w-4 h-4 rounded bg-surface-container text-primary accent-primary cursor-pointer" id="orientationLockCheckbox" type="checkbox"><span class="font-body-sm text-body-sm text-on-surface">锁定固定方向 (user_rotation)</span></label><button class="px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-colors" onclick="resetOrientation()"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>恢复自动重力感应</span></button></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">aspect_ratio</span></div><h2 class="font-headline-md text-headline-md text-on-surface">屏幕比例、Density 与尺寸模拟</h2></div><span class="font-code-sm text-code-sm text-outline px-2.5 py-0.5 rounded-full bg-surface-container-high">wm size / density</span></div><div class="flex items-center gap-2 flex-wrap mt-space-xs"><button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors" onclick="applyPresetResolution(1080, 2520, 440, '21:9 超宽屏')">21:9 超宽屏</button><button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors" onclick="applyPresetResolution(1080, 2160, 420, '18:9 长屏')">18:9 长屏</button><button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors" onclick="applyPresetResolution(1080, 1920, 400, '16:9 经典')">16:9 经典</button><button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors" onclick="applyPresetResolution(1536, 2048, 320, '4:3 平板比例')">4:3 平板</button></div><div class="grid grid-cols-2 gap-space-sm mt-space-sm"><div class="flex flex-col gap-1"><label class="font-code-sm text-code-sm text-outline">宽度 (Width px)</label><input class="p-space-xs px-space-sm rounded-xl bg-surface-container text-on-surface font-code-md text-code-md outline-none focus:ring-1 focus:ring-primary" id="input-wm-width" type="number" value="1080"></div><div class="flex flex-col gap-1"><label class="font-code-sm text-code-sm text-outline">高度 (Height px)</label><input class="p-space-xs px-space-sm rounded-xl bg-surface-container text-on-surface font-code-md text-code-md outline-none focus:ring-1 focus:ring-primary" id="input-wm-height" type="number" value="2400"></div></div><div class="mt-space-sm flex items-center justify-between gap-space-sm"><button class="flex-1 py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium transition-colors" onclick="applyCustomWmSize()">应用屏幕尺寸 (wm size)</button><button class="px-4 py-2 rounded-full bg-surface-container text-error hover:bg-surface-container-high font-body-sm text-body-sm transition-colors" onclick="resetWmSizeAndDensity()">重置默认尺寸</button></div><div class="mt-space-sm pt-space-xs flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">屏幕像素密度 (Density DPI)</span><span class="font-code-md text-code-md text-primary font-bold" id="dpi-value-label">440 dpi</span></div><input class="w-full accent-primary cursor-pointer" id="dpi-range-slider" max="640" min="240" oninput="onDpiSliderChange(this.value)" step="20" type="range" value="440"><div class="flex items-center justify-between gap-2 mt-1"><button class="flex-1 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-code-sm font-code-sm text-on-surface-variant" onclick="quickSetDpi(320)">320 ldpi</button><button class="flex-1 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-code-sm font-code-sm text-on-surface-variant" onclick="quickSetDpi(420)">420 mdpi</button><button class="flex-1 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-code-sm font-code-sm text-on-surface-variant" onclick="quickSetDpi(480)">480 hdpi</button><button class="flex-1 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-code-sm font-code-sm text-on-surface-variant" onclick="quickSetDpi(560)">560 xhdpi</button></div></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[20px]">devices_fold</span></div><h2 class="font-headline-md text-headline-md text-on-surface">折叠屏形态模拟 (Foldable Simulator)</h2></div><span class="font-code-sm text-code-sm text-primary px-2.5 py-0.5 rounded-full bg-surface-container-high font-semibold">Hinge Mocking</span></div><div class="grid grid-cols-3 gap-2 mt-space-xs"><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setFoldState('unfolded')"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-primary">laptop_chromebook</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1 font-medium">展开态/内屏</span><span class="font-code-sm text-code-sm text-outline">2176x1812</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setFoldState('folded')"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">smartphone</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1 font-medium">折叠态/外屏</span><span class="font-code-sm text-code-sm text-outline">2316x904</span></button><button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all" onclick="setFoldState('flex')"><div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-[18px] text-secondary">videocam</span></div><span class="font-body-sm text-body-sm text-on-surface mt-1 font-medium">半折悬停态</span><span class="font-code-sm text-code-sm text-outline">Flex 90°</span></button></div><div class="mt-space-sm p-space-sm rounded-2xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-semibold">折叠铰链角度传感模拟 (Hinge Angle)</span><span class="font-code-md text-code-md text-secondary font-bold" id="hinge-angle-label">180° (Flat)</span></div><input class="w-full accent-secondary cursor-pointer" id="hinge-slider" max="180" min="0" oninput="onHingeAngleChange(this.value)" type="range" value="180"><div class="flex items-center justify-between text-code-sm font-code-sm text-outline"><span>0° (完全合上)</span><span>90° (垂直立起悬停)</span><span>180° (完全展平)</span></div></div><div class="mt-space-sm flex items-center justify-end"><button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-colors" onclick="resetFoldState()"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>重置折叠屏状态至标准直板</span></button></div></div>
+</div>
+<div class="col-span-12 xl:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-md flex flex-col gap-space-sm border border-surface-variant/30"><div class="w-full flex items-center justify-between pb-space-xs border-b border-surface-variant/40"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">screen_share</span></div><h2 class="font-headline-md text-headline-md text-on-surface">实时设备投屏 (Scrcpy Ultra-Low Latency)</h2></div><span class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded-full font-semibold">LIVE</span><span class="font-code-sm text-code-sm text-secondary bg-surface-container px-2.5 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Foldable &amp; Tablet Ready</span></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-space-xs bg-surface-container px-3 py-1 rounded-full text-code-sm font-code-sm text-on-surface"><span class="text-outline">FPS:</span><span class="text-primary font-bold" id="live-fps-counter">60.1</span><span class="text-outline-variant">|</span><span class="text-outline">Latency:</span><span class="text-secondary font-bold">14ms</span></div><button class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors" id="pointer-trail-btn" onclick="togglePointerTrail()" title="Toggle pointer location indicator"><span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span><span>触控轨迹</span></button><button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleProjectionOrientation()" title="快捷旋转 90°"><span class="material-symbols-outlined text-[18px]">screen_rotation</span></button><button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="fitScreenView()" title="Zoom Fit"><span class="material-symbols-outlined text-[18px]">fit_screen</span></button><button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleFullscreen()" title="Full Screen"><span class="material-symbols-outlined text-[18px]">fullscreen</span></button></div></div><div class="w-full flex items-center justify-between gap-space-sm flex-wrap py-1"><div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-full border border-surface-variant/30"><button class="flex items-center gap-1.5 px-3 py-1 rounded-full text-body-sm font-body-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-form-phone" onclick="switchDevicePreset('phone')"><span class="material-symbols-outlined text-[16px]">smartphone</span><span>手机 (9:19.5)</span></button><button class="flex items-center gap-1.5 px-3 py-1 rounded-full text-body-sm font-body-sm transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" id="btn-form-foldable-inner" onclick="switchDevicePreset('foldable-inner')"><span class="material-symbols-outlined text-[16px]">laptop_chromebook</span><span>折叠内屏 (8:7.1)</span></button><button class="flex items-center gap-1.5 px-3 py-1 rounded-full text-body-sm font-body-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-form-foldable-outer" onclick="switchDevicePreset('foldable-outer')"><span class="material-symbols-outlined text-[16px]">devices_fold</span><span>折叠外屏 (23:9)</span></button><button class="flex items-center gap-1.5 px-3 py-1 rounded-full text-body-sm font-body-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-form-tablet" onclick="switchDevicePreset('tablet')"><span class="material-symbols-outlined text-[16px]">tablet_mac</span><span>大平板 (16:10)</span></button></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-full text-code-sm font-code-sm"><span class="text-outline">Hinge:</span><span class="text-primary font-bold" id="telemetry-hinge-angle">180° Flat</span></div><div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-full text-code-sm font-code-sm"><span class="text-outline">Mode:</span><span class="text-secondary font-semibold" id="telemetry-window-mode">Dual-Pane</span></div><div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded-full border border-surface-variant/30 text-code-sm font-code-sm"><button class="px-2.5 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="setScaleMode(50)">50%</button><button class="px-2.5 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="setScaleMode(75)">75%</button><button class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-semibold" onclick="setScaleMode(100)">100%</button><button class="px-2.5 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="setScaleMode('fit')">Fit</button></div></div></div><div class="w-full flex justify-center py-2 relative overflow-hidden bg-surface-container-lowest/60 rounded-2xl min-h-[590px] items-center"><div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20"><div class="w-96 h-96 rounded-full bg-gradient-to-tr from-primary/30 to-secondary/30 blur-3xl"></div></div><div class="relative transition-all duration-300 ease-out bg-surface-container-lowest p-3 rounded-[40px] shadow-2xl flex flex-col items-center border border-surface-variant/40" id="device-frame-container"><div class="absolute -left-1 top-24 w-1 h-12 bg-surface-variant rounded-l"></div><div class="absolute -left-1 top-40 w-1 h-12 bg-surface-variant rounded-l"></div><div class="absolute -right-1 top-28 w-1 h-16 bg-surface-variant rounded-r"></div><div class="relative overflow-hidden rounded-[28px] bg-[#0c1220] transition-all duration-300 w-[540px] h-[480px] select-none cursor-pointer flex flex-col justify-between border border-white/5" id="device-screen" onclick="handleScreenTap(event)"><div class="w-full h-8 px-4 flex items-center justify-between text-white/90 text-[11px] font-code-sm z-30 select-none bg-gradient-to-b from-black/80 to-transparent"><div class="flex items-center gap-2"><span>09:41</span><span class="px-2 py-0.2 rounded-full bg-surface-container-high text-[10px] text-primary" id="screen-aspect-badge">8:7.1 Foldable Inner</span></div><div class="w-3.5 h-3.5 rounded-full bg-black mx-auto ring-1 ring-white/10 flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-[#111a2e]"></div></div><div class="flex items-center gap-2"><span class="text-[10px] text-secondary font-code-sm" id="screen-res-indicator">2176x1812</span><span class="material-symbols-outlined text-[13px]">wifi</span><span class="material-symbols-outlined text-[13px]">signal_cellular_4_bar</span><span class="font-bold text-[10px]">98%</span></div></div><div class="absolute top-9 left-3 right-3 z-20 flex items-center justify-between px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-[10px] font-code-sm text-primary border border-white/5"><div class="flex items-center gap-1.5"><div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></div><span>POINTER:</span><span id="screen-coords-label">X: 1088 Y: 906</span><span class="text-outline-variant">|</span><span class="text-on-surface-variant" id="touch-res-label">WM Size: 2176x1812 (380dpi)</span></div><div class="flex items-center gap-2"><span class="text-primary font-semibold" id="fold-crease-status">Crease: Centered</span><span class="text-secondary" id="device-orientation-label">EXPANDED 0°</span></div></div><div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[2px] bg-gradient-to-b from-white/10 via-primary/20 to-white/10 pointer-events-none z-20 flex flex-col items-center justify-center" id="fold-crease-indicator"><div class="px-2 py-0.5 rounded-full bg-black/60 text-[9px] font-code-sm text-primary/70 backdrop-blur-sm -rotate-90 select-none tracking-widest border border-primary/20">HINGE CREASE 180°</div></div><div class="absolute w-12 h-12 rounded-full bg-primary/40 -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-0 transition-transform duration-200 z-40" id="touch-ripple"></div><div class="absolute pointer-events-none z-30 opacity-0 transition-opacity duration-300" id="swipe-trail"><div class="w-1.5 h-32 bg-gradient-to-t from-primary to-transparent rounded-full shadow-[0_0_12px_#4edea3]"></div></div><div class="w-full flex-1 p-3 flex flex-col justify-between z-10 pt-10" id="screen-app-content"><div class="grid grid-cols-12 gap-3 h-full items-stretch pt-2"><div class="col-span-6 flex flex-col gap-2 p-3 rounded-2xl bg-surface-container/70 backdrop-blur-md border border-white/5 justify-between" id="screen-left-pane"><div class="flex flex-col gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[16px]">android</span></div><div class="flex flex-col min-w-0"><span class="font-headline-md text-[11px] text-white font-semibold truncate">DroidCraft Left Workspace</span><span class="font-code-sm text-[9px] text-on-surface-variant truncate">Foldable Adaptive Pane A</span></div></div><div class="grid grid-cols-2 gap-1.5"><div class="p-2 rounded-xl bg-surface-container-high/80 flex flex-col"><span class="text-[9px] text-outline">Render Thread</span><span class="text-[11px] font-bold text-primary font-code-md">16.6ms / frame</span></div><div class="p-2 rounded-xl bg-surface-container-high/80 flex flex-col"><span class="text-[9px] text-outline">Window State</span><span class="text-[11px] font-bold text-secondary font-code-md">Split Left (50%)</span></div></div><div class="p-2 rounded-xl bg-surface-container-lowest/80 flex flex-col gap-1"><div class="flex items-center justify-between text-[10px] text-on-surface-variant font-code-sm"><span>Display Metrics</span><span class="text-primary font-semibold">2176 x 1812</span></div><div class="flex items-center justify-between text-[9px] text-outline font-code-sm"><span>Density / Scale</span><span class="text-secondary">380 dpi (2.375x)</span></div></div></div><div class="p-2 rounded-xl bg-surface-container-high/60 flex items-center justify-between text-[10px] text-on-surface"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hinge Sensor Active</span><span class="font-code-sm text-secondary">180.0°</span></div></div><div class="col-span-6 flex flex-col gap-2 p-3 rounded-2xl bg-surface-container/70 backdrop-blur-md border border-white/5 justify-between" id="screen-right-pane"><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">terminal</span></div><div class="flex flex-col min-w-0"><span class="font-headline-md text-[11px] text-white font-semibold truncate">Target Runtime App</span><span class="font-code-sm text-[9px] text-on-surface-variant truncate">PID: 14829 (Split Pane B)</span></div></div><span class="font-code-sm text-[9px] text-primary bg-primary/10 px-2 py-0.5 rounded-full">FOCUSED</span></div><div class="grid grid-cols-2 gap-1.5"><div class="p-2 rounded-xl bg-surface-container-high/80 flex flex-col"><span class="text-[9px] text-outline">Heap Memory</span><span class="text-[11px] font-bold text-secondary font-code-md">48.2 MB / 256M</span></div><div class="p-2 rounded-xl bg-surface-container-high/80 flex flex-col"><span class="text-[9px] text-outline">Insets / Safe</span><span class="text-[11px] font-bold text-primary font-code-md">L:0 T:24 R:0 B:16</span></div></div><div class="p-2 rounded-xl bg-surface-container-lowest/80 flex flex-col gap-1"><div class="flex items-center justify-between text-[10px] text-white"><span>Foldable Navigation Inset</span><span class="text-primary text-[9px]">Dynamic Bar</span></div><div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden"><div class="w-3/4 h-full bg-primary rounded-full"></div></div></div></div><div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-high/60 text-[10px] text-on-surface-variant font-code-sm"><span>WindowManager State:</span><span class="text-primary font-semibold">MULTI_WINDOW_MODE</span></div></div></div><div class="flex flex-col items-center gap-1.5 mt-2 mb-1"><div class="flex items-center justify-around w-full max-w-[420px] px-4 py-1.5 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-white/5 shadow-md"><span class="material-symbols-outlined text-white/80 text-[18px] hover:text-primary">apps</span><span class="material-symbols-outlined text-white/80 text-[18px] hover:text-primary">chat</span><span class="material-symbols-outlined text-white/80 text-[18px] hover:text-primary">explore</span><span class="material-symbols-outlined text-primary text-[22px]">home</span><span class="material-symbols-outlined text-white/80 text-[18px] hover:text-primary">folder</span><span class="material-symbols-outlined text-white/80 text-[18px] hover:text-primary">settings</span></div><div class="w-32 h-1 bg-white/70 rounded-full shadow-sm"></div></div></div></div></div><div class="w-full flex items-center justify-between pt-space-xs text-code-sm font-code-sm text-outline flex-wrap gap-2 border-t border-surface-variant/30"><div class="flex items-center gap-space-md"><div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Direct Input Injection: ENABLED</span></div><div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>H.264 Video: GPU Hardware Accel</span></div><div class="flex items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[15px] text-primary">volume_up</span><span>Audio Forwarding: Opus 48kHz</span></div></div><div class="flex items-center gap-space-xs text-[11px]"><span class="text-primary font-semibold">Adaptive WM Layout</span><span class="text-outline-variant">•</span><span class="text-secondary">Device API 34</span></div></div></div></div>
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-md flex flex-col gap-space-sm border border-surface-variant/30"><div class="flex items-center justify-between pb-space-xs"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span></div><h2 class="font-headline-md text-headline-md text-on-surface">基础 ADB 单次命令交互终端</h2></div><div class="flex items-center gap-space-xs"><span class="font-code-sm text-code-sm text-outline">快速预设:</span><select class="bg-surface-container text-on-surface font-code-sm text-code-sm py-1.5 px-3 rounded-full border border-surface-variant/30 outline-none focus:ring-1 focus:ring-primary cursor-pointer" id="quick-cmd-selector" onchange="fillQuickCommand(this.value)"><option value="">-- 选择调试常用指令 --</option><option value="dumpsys window | grep mCurrentFocus">获取当前前台聚焦窗口 (Current Focus)</option><option value="dumpsys display | grep mOverrideDisplayInfo">获取当前 Display 真实物理属性</option><option value="getprop ro.build.version.release">查询 Android 系统版本</option><option value="dumpsys battery | grep level">读取电池电量状态</option><option value="dumpsys meminfo com.droidcraft.runtime.qa">查询目标 App 内存占用 (Meminfo)</option><option value="pm list packages -3">枚举第三方已安装应用包名</option></select></div></div><div class="flex items-center gap-space-xs bg-surface-container-lowest p-1.5 pr-2 rounded-full border border-surface-variant/30"><span class="font-code-md text-code-md text-primary font-bold pl-3 select-none">$ adb shell</span><input class="flex-1 bg-transparent text-on-surface font-code-md text-code-md px-2 py-1 outline-none placeholder:text-outline-variant" id="terminal-input" onkeydown="handleInputKeydown(event)" placeholder="输入要执行的单次 adb 命令，例如: dumpsys window | grep mCurrentFocus" type="text" value="dumpsys window | grep mCurrentFocus"><button class="px-5 py-2 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:opacity-90 transition-opacity flex items-center gap-1.5 shadow-sm" onclick="executeTerminalCommand()"><span class="material-symbols-outlined text-[18px]">play_arrow</span><span>执行命令 (Run Cmd)</span></button></div><div class="bg-surface-container-lowest rounded-2xl p-space-sm flex flex-col gap-space-xs font-code-sm text-code-sm border border-surface-variant/20"><div class="flex items-center justify-between pb-space-xs px-1"><div class="flex items-center gap-space-xs"><span class="text-outline">$</span><span class="text-on-surface font-semibold" id="last-cmd-display">adb shell dumpsys window | grep mCurrentFocus</span></div><div class="flex items-center gap-space-xs"><span class="px-2.5 py-0.5 rounded-full bg-primary/20 text-primary text-[11px] font-bold" id="cmd-status-badge">Exit Code: 0 (Success)</span><span class="text-outline">|</span><span class="text-secondary" id="cmd-time-badge">耗时: 18ms</span></div></div><div class="font-code-md text-code-md text-on-surface-variant overflow-x-auto whitespace-pre p-space-sm rounded-xl bg-[#070d19] max-h-44 overflow-y-auto leading-relaxed selection:bg-primary/30 selection:text-white border border-white/5" id="terminal-stdout">  mCurrentFocus=Window{8d19208 u0 com.droidcraft.runtime.qa/com.droidcraft.runtime.qa.MainActivity}
+  mFocusedApp=ActivityRecord{cfb078a u0 com.droidcraft.runtime.qa/.MainActivity t438}</div></div><div class="flex items-center justify-between text-code-sm font-code-sm text-outline pt-1 px-1"><span>Tip: 支持直接使用管道过滤符 `| grep` 及参数透传</span><button class="hover:text-on-surface flex items-center gap-1 transition-colors px-2 py-0.5 rounded-full hover:bg-surface-container" onclick="clearTerminalOutput()"><span class="material-symbols-outlined text-[14px]">clear_all</span><span>清空控制台</span></button></div></div>
+</div>
+</div>
+<div class="fixed bottom-12 right-6 px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface shadow-xl border-l-4 border-primary flex items-center gap-space-sm transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 font-body-sm text-body-sm" id="toast-notification">
+<span class="material-symbols-outlined text-primary text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-message">ADB Command Executed</span>
+</div>
+</div>
+<script>
+  let currentResolution = { width: 1080, height: 2400, dpi: 440 };
+  let currentFoldMode = 'standard';
+  let pointerTrailActive = true;
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toast-notification');
+    const msg = document.getElementById('toast-message');
+    const ico = document.getElementById('toast-icon');
+    if (!toast || !msg || !ico) return;
+    
+    msg.textContent = message;
+    ico.textContent = icon;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2400);
+  }
+
+  function setTerminalOutput(cmd, output, exitCode = 0, duration = 18) {
+    const lastCmd = document.getElementById('last-cmd-display');
+    const stdout = document.getElementById('terminal-stdout');
+    const statusBadge = document.getElementById('cmd-status-badge');
+    const timeBadge = document.getElementById('cmd-time-badge');
+    
+    if (lastCmd) lastCmd.textContent = `adb shell ${cmd}`;
+    if (stdout) stdout.textContent = output;
+    if (statusBadge) {
+      statusBadge.textContent = exitCode === 0 ? 'Exit Code: 0 (Success)' : `Exit Code: ${exitCode} (Failed)`;
+      statusBadge.className = exitCode === 0 
+        ? 'px-1.5 py-0.5 rounded bg-primary/20 text-primary text-[11px] font-bold' 
+        : 'px-1.5 py-0.5 rounded bg-error/20 text-error text-[11px] font-bold';
+    }
+    if (timeBadge) timeBadge.textContent = `耗时: ${duration}ms`;
+  }
+
+  function triggerKeyevent(code, label) {
+    const cmd = `input keyevent ${code}`;
+    const output = `[ADB Input Subsystem]\nEvent injected: keycode ${code}\nDispatch status: Delivered to focused window mCurrentFocus.`;
+    setTerminalOutput(cmd, output, 0, Math.floor(Math.random() * 12 + 10));
+    showToast(`触发按键: ${label} (code: ${code})`);
+  }
+
+  function triggerLongPower() {
+    const cmd = 'input keyevent --longpress 26';
+    const output = `[ADB Input Subsystem]\nKey 26 (POWER) pressed down with policy FLAG_LONG_PRESS\nSystem dialog PowerMenu requested.`;
+    setTerminalOutput(cmd, output, 0, 32);
+    showToast('长按电源键成功 (唤起关机菜单)');
+  }
+
+  function triggerScreenshot() {
+    const timestamp = Math.floor(Date.now() / 1000);
+    const cmd = `screencap -p /sdcard/screen_${timestamp}.png`;
+    const output = `Capture completed. Saved frame buffer (1080x2400 ARGB_8888) to /sdcard/screen_${timestamp}.png`;
+    setTerminalOutput(cmd, output, 0, 84);
+    showToast('截屏已触发并存储至设备存储');
+  }
+
+  function triggerNotificationExpand() {
+    const cmd = 'cmd statusbar expand-notifications';
+    const output = `Service 'statusbar' invoked: expandNotifications() -> OK`;
+    setTerminalOutput(cmd, output, 0, 22);
+    showToast('已展开系统通知面板');
+  }
+
+  function triggerBottomSwipeUp() {
+    const cmd = 'input swipe 540 2350 540 1200 250';
+    const output = `[Gesture Engine]\nDetected Display Height: 2400px\nInjected swipe gesture: (540, 2350) -> (540, 1200) in 250ms\nRecents/Home transition dispatched.`;
+    setTerminalOutput(cmd, output, 0, 252);
+    animateDeviceSwipe('up');
+    showToast('底部上滑手势触发完成 (返回桌面/任务切换)');
+  }
+
+  function triggerContentSwipe(type) {
+    let y1 = 1600;
+    let y2 = 800;
+    let duration = 300;
+    let desc = '中滑 (Medium 800px)';
+
+    if (type === 'short') {
+      y1 = 1500;
+      y2 = 1200;
+      duration = 200;
+      desc = '短滑 (Short 300px)';
+    } else if (type === 'fling') {
+      y1 = 1800;
+      y2 = 400;
+      duration = 150;
+      desc = '惯性长滑 (Fling 1400px)';
+    }
+
+    const cmd = `input swipe 540 ${y1} 540 ${y2} ${duration}`;
+    const output = `[Touch Simulation]\nContent scroll dispatched: (540, ${y1}) -> (540, ${y2}) [Duration: ${duration}ms]`;
+    setTerminalOutput(cmd, output, 0, duration);
+    animateDeviceSwipe('content');
+    showToast(`触发列表滚动: ${desc}`);
+  }
+
+  function triggerEdgeBack(edge, count = 1) {
+    const xStart = edge === 'left' ? 10 : 1070;
+    const xEnd = edge === 'left' ? 450 : 630;
+    const y = 1200;
+    const cmd = count > 1 
+      ? `for i in $(seq 1 ${count}); do input swipe ${xStart} ${y} ${xEnd} ${y} 120; sleep 0.12; done`
+      : `input swipe ${xStart} ${y} ${xEnd} ${y} 120`;
+    
+    const output = `[Edge Gesture Detector]\nInjected ${count} inward swipe gesture(s) from ${edge.toUpperCase()} edge.\nAction: System Back Navigation Triggered.`;
+    setTerminalOutput(cmd, output, 0, count * 125);
+    animateDeviceEdge(edge);
+    showToast(`${edge === 'left' ? '左侧' : '右侧'}边缘向内滑返回 (连击 x${count})`);
+  }
+
+  function setOrientation(val, label) {
+    const lock = document.getElementById('orientationLockCheckbox')?.checked ? 0 : 1;
+    const cmd = `settings put system accelerometer_rotation ${lock}; settings put system user_rotation ${val}`;
+    const output = `Orientation overridden:\nuser_rotation = ${val} (${label})\naccelerometer_rotation = ${lock}`;
+    setTerminalOutput(cmd, output, 0, 19);
+
+    const screen = document.getElementById('device-screen');
+    const labelElem = document.getElementById('device-orientation-label');
+    if (labelElem) labelElem.textContent = label.toUpperCase();
+
+    if (screen) {
+      if (val === 1 || val === 3) {
+        screen.style.width = '420px';
+        screen.style.height = '340px';
+      } else {
+        screen.style.width = '290px';
+        screen.style.height = '580px';
+      }
+    }
+    showToast(`屏幕旋转应用: ${label}`);
+  }
+
+  function resetOrientation() {
+    const cmd = 'settings put system accelerometer_rotation 1';
+    const output = 'Accelerometer auto-rotation restored to default (1).';
+    setTerminalOutput(cmd, output, 0, 14);
+    const screen = document.getElementById('device-screen');
+    const labelElem = document.getElementById('device-orientation-label');
+    if (screen) {
+      screen.style.width = '290px';
+      screen.style.height = '580px';
+    }
+    if (labelElem) labelElem.textContent = 'PORTRAIT 0°';
+    showToast('已重置屏幕旋转至重力自适应');
+  }
+
+  function applyPresetResolution(w, h, dpi, label) {
+    document.getElementById('input-wm-width').value = w;
+    document.getElementById('input-wm-height').value = h;
+    document.getElementById('dpi-range-slider').value = dpi;
+    document.getElementById('dpi-value-label').textContent = `${dpi} dpi`;
+    
+    applyCustomWmSize(w, h, dpi, label);
+  }
+
+  function applyCustomWmSize(w, h, dpi, label = 'Custom Resolution') {
+    const width = w || parseInt(document.getElementById('input-wm-width').value) || 1080;
+    const height = h || parseInt(document.getElementById('input-wm-height').value) || 2400;
+    const targetDpi = dpi || parseInt(document.getElementById('dpi-range-slider').value) || 440;
+
+    const cmd = `wm size ${width}x${height} && wm density ${targetDpi}`;
+    const output = `Display parameters applied successfully:\nPhysical size: ${width}x${height}\nOverride density: ${targetDpi} dpi (scale factor: ${(targetDpi/160).toFixed(2)}x)`;
+    setTerminalOutput(cmd, output, 0, 36);
+
+    currentResolution = { width, height, dpi: targetDpi };
+    document.getElementById('top-resolution-readout').textContent = `${width}x${height} @ ${targetDpi}dpi`;
+
+    const screen = document.getElementById('device-screen');
+    if (screen) {
+      const baseRatio = width / height;
+      const targetHeight = 580;
+      const calculatedWidth = Math.min(480, Math.max(220, Math.round(targetHeight * baseRatio)));
+      screen.style.width = `${calculatedWidth}px`;
+      screen.style.height = `${targetHeight}px`;
+    }
+
+    showToast(`已应用屏幕分辨率: ${width}x${height} (${targetDpi} dpi)`);
+  }
+
+  function onDpiSliderChange(val) {
+    document.getElementById('dpi-value-label').textContent = `${val} dpi`;
+  }
+
+  function quickSetDpi(dpi) {
+    document.getElementById('dpi-range-slider').value = dpi;
+    document.getElementById('dpi-value-label').textContent = `${dpi} dpi`;
+    const cmd = `wm density ${dpi}`;
+    const output = `Density overridden to ${dpi} dpi. System UI recreating configuration...`;
+    setTerminalOutput(cmd, output, 0, 24);
+    currentResolution.dpi = dpi;
+    document.getElementById('top-resolution-readout').textContent = `${currentResolution.width}x${currentResolution.height} @ ${dpi}dpi`;
+    showToast(`DPI 修改为: ${dpi} dpi`);
+  }
+
+  function resetWmSizeAndDensity() {
+    const cmd = 'wm size reset && wm density reset';
+    const output = 'Screen size & density reset to hardware defaults (1080x2400 @ 440 dpi).';
+    setTerminalOutput(cmd, output, 0, 28);
+    
+    document.getElementById('input-wm-width').value = 1080;
+    document.getElementById('input-wm-height').value = 2400;
+    document.getElementById('dpi-range-slider').value = 440;
+    document.getElementById('dpi-value-label').textContent = '440 dpi';
+    currentResolution = { width: 1080, height: 2400, dpi: 440 };
+    document.getElementById('top-resolution-readout').textContent = '1080x2400 @ 440dpi';
+
+    const screen = document.getElementById('device-screen');
+    if (screen) {
+      screen.style.width = '290px';
+      screen.style.height = '580px';
+    }
+    showToast('已重置屏幕尺寸与像素密度');
+  }
+
+  function setFoldState(state) {
+    currentFoldMode = state;
+    const foldReadout = document.getElementById('top-fold-readout');
+    const screen = document.getElementById('device-screen');
+    const slider = document.getElementById('hinge-slider');
+    const hingeLabel = document.getElementById('hinge-angle-label');
+
+    if (state === 'unfolded') {
+      const cmd = 'wm size 2176x1812 && wm density 380 && cmd sensor mock-hinge 180';
+      const output = 'Foldable state changed to UNFOLDED_INNER_SCREEN.\nResolution: 2176x1812 | Hinge angle: 180 degrees.';
+      setTerminalOutput(cmd, output, 0, 42);
+      if (foldReadout) foldReadout.textContent = '展开内屏 (2176x1812)';
+      if (screen) {
+        screen.style.width = '420px';
+        screen.style.height = '480px';
+      }
+      if (slider) slider.value = 180;
+      if (hingeLabel) hingeLabel.textContent = '180° (完全展平)';
+      showToast('切换至折叠屏: 展开态/内屏');
+    } else if (state === 'folded') {
+      const cmd = 'wm size 904x2316 && wm density 420 && cmd sensor mock-hinge 0';
+      const output = 'Foldable state changed to FOLDED_COVER_SCREEN.\nResolution: 904x2316 | Hinge angle: 0 degrees.';
+      setTerminalOutput(cmd, output, 0, 38);
+      if (foldReadout) foldReadout.textContent = '折叠外屏 (2316x904)';
+      if (screen) {
+        screen.style.width = '240px';
+        screen.style.height = '580px';
+      }
+      if (slider) slider.value = 0;
+      if (hingeLabel) hingeLabel.textContent = '0° (完全闭合)';
+      showToast('切换至折叠屏: 折叠外屏');
+    } else if (state === 'flex') {
+      const cmd = 'cmd sensor mock-hinge 90 && cmd device_state state 2';
+      const output = 'Foldable state changed to HALF_FOLDED_FLEX_MODE (State 2).\nHinge angle fixed to 90 degrees. Top/Bottom split viewport active.';
+      setTerminalOutput(cmd, output, 0, 45);
+      if (foldReadout) foldReadout.textContent = '半折悬停态 (Flex 90°)';
+      if (slider) slider.value = 90;
+      if (hingeLabel) hingeLabel.textContent = '90° (垂直立起悬停)';
+      showToast('切换至折叠屏: 半折悬停态 (Flex Mode)');
+    }
+  }
+
+  function onHingeAngleChange(val) {
+    const hingeLabel = document.getElementById('hinge-angle-label');
+    if (hingeLabel) {
+      if (val == 0) hingeLabel.textContent = '0° (完全闭合)';
+      else if (val == 90) hingeLabel.textContent = '90° (垂直立起悬停)';
+      else if (val == 180) hingeLabel.textContent = '180° (完全展平)';
+      else hingeLabel.textContent = `${val}° (Custom Angle)`;
+    }
+    const cmd = `cmd sensor set-hinge-angle ${val}`;
+    setTerminalOutput(cmd, `Hinge physical angle broadcast: ${val}° via SensorManager.`, 0, 12);
+  }
+
+  function resetFoldState() {
+    setFoldState('unfolded');
+    resetWmSizeAndDensity();
+    document.getElementById('top-fold-readout').textContent = 'Standard (Flat 180°)';
+    showToast('折叠屏模拟已重置至标准模式');
+  }
+
+  function handleScreenTap(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const clickX = Math.round(event.clientX - rect.left);
+    const clickY = Math.round(event.clientY - rect.top);
+    
+    const virtualX = Math.round((clickX / rect.width) * currentResolution.width);
+    const virtualY = Math.round((clickY / rect.height) * currentResolution.height);
+
+    const coords = document.getElementById('screen-coords-label');
+    if (coords) coords.textContent = `X: ${virtualX} Y: ${virtualY}`;
+
+    const ripple = document.getElementById('touch-ripple');
+    if (ripple) {
+      ripple.style.left = `${clickX}px`;
+      ripple.style.top = `${clickY}px`;
+      ripple.classList.remove('scale-0');
+      ripple.classList.add('scale-100');
+      setTimeout(() => {
+        ripple.classList.remove('scale-100');
+        ripple.classList.add('scale-0');
+      }, 200);
+    }
+
+    const cmd = `input tap ${virtualX} ${virtualY}`;
+    setTerminalOutput(cmd, `Input injected: MotionEvent.ACTION_DOWN/UP at (${virtualX}, ${virtualY})`, 0, 14);
+  }
+
+  function animateDeviceSwipe(direction) {
+    const trail = document.getElementById('swipe-trail');
+    if (!trail) return;
+    trail.style.left = '50%';
+    trail.style.bottom = '20px';
+    trail.style.opacity = '1';
+    trail.style.transform = 'translate(-50%, -100px)';
+    
+    setTimeout(() => {
+      trail.style.opacity = '0';
+      trail.style.transform = 'translate(-50%, 0)';
+    }, 350);
+  }
+
+  function animateDeviceEdge(edge) {
+    const trail = document.getElementById('swipe-trail');
+    if (!trail) return;
+    trail.style.bottom = '50%';
+    trail.style.left = edge === 'left' ? '10px' : 'auto';
+    trail.style.right = edge === 'right' ? '10px' : 'auto';
+    trail.style.opacity = '1';
+    trail.style.transform = edge === 'left' ? 'translateX(60px)' : 'translateX(-60px)';
+    
+    setTimeout(() => {
+      trail.style.opacity = '0';
+      trail.style.transform = 'translateX(0)';
+    }, 300);
+  }
+
+  function togglePointerTrail() {
+    pointerTrailActive = !pointerTrailActive;
+    const btn = document.getElementById('pointer-trail-btn');
+    if (btn) {
+      btn.className = pointerTrailActive 
+        ? 'flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container text-body-sm font-body-sm font-semibold transition-colors'
+        : 'flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-body-sm font-body-sm text-on-surface transition-colors';
+    }
+    const cmd = `settings put system pointer_location ${pointerTrailActive ? 1 : 0}`;
+    setTerminalOutput(cmd, `pointer_location set to: ${pointerTrailActive ? 1 : 0}`, 0, 16);
+    showToast(`指针轨迹显示: ${pointerTrailActive ? '开启' : '关闭'}`);
+  }
+
+  function fillQuickCommand(cmd) {
+    if (!cmd) return;
+    document.getElementById('terminal-input').value = cmd;
+    executeTerminalCommand();
+  }
+
+  function handleInputKeydown(e) {
+    if (e.key === 'Enter') {
+      executeTerminalCommand();
+    }
+  }
+
+  function executeTerminalCommand() {
+    const input = document.getElementById('terminal-input');
+    const cmd = input.value.trim();
+    if (!cmd) return;
+
+    let mockOutput = `Executing: adb shell ${cmd}\n`;
+    let duration = Math.floor(Math.random() * 25 + 12);
+
+    if (cmd.includes('mCurrentFocus')) {
+      mockOutput = `  mCurrentFocus=Window{8d19208 u0 com.droidcraft.runtime.qa/com.droidcraft.runtime.qa.MainActivity}\n  mFocusedApp=ActivityRecord{cfb078a u0 com.droidcraft.runtime.qa/.MainActivity t438}`;
+    } else if (cmd.includes('mOverrideDisplayInfo')) {
+      mockOutput = `  mOverrideDisplayInfo=DisplayInfo{"Built-in Screen", displayId 0, FLAG_SUPPORTS_PROTECTED_BUFFERS, real ${currentResolution.width} x ${currentResolution.height}, largest ${currentResolution.width} x ${currentResolution.height}, density ${currentResolution.dpi} (3.0 scale), fps 60.000004}`;
+    } else if (cmd.includes('ro.build.version.release')) {
+      mockOutput = `14 (Android 14 UpsideDownCake, API Level 34)`;
+    } else if (cmd.includes('battery')) {
+      mockOutput = `  level: 98\n  scale: 100\n  voltage: 4324\n  temperature: 298 (29.8°C)\n  technology: Li-poly\n  status: 2 (Charging)`;
+    } else if (cmd.includes('meminfo')) {
+      mockOutput = `** MEMINFO in pid 14829 [com.droidcraft.runtime.qa] **\n                   Pss  Private  Private  SwapPss     Heap     Heap     Heap\n                 Total    Dirty    Clean    Dirty     Size    Alloc     Free\n                ------   ------   ------   ------   ------   ------   ------\n  Native Heap    18420    18240        0        0    32768    24190     8578\n  Dalvik Heap    16854    16620        0        0    48240    38420     9820\n        TOTAL    38420    35860        0        0    81008    62610    18398`;
+    } else if (cmd.includes('list packages -3')) {
+      mockOutput = `package:com.droidcraft.runtime.qa\npackage:org.telegram.messenger\npackage:com.android.chrome\npackage:com.google.android.apps.maps`;
+    } else {
+      mockOutput = `Output from target daemon:\n[Command succeeded with return code 0]\nTimestamp: ${new Date().toISOString()}`;
+    }
+
+    setTerminalOutput(cmd, mockOutput, 0, duration);
+    showToast(`指令执行成功 ($ adb shell ${cmd.slice(0, 20)}...)`);
+  }
+
+  function clearTerminalOutput() {
+    setTerminalOutput('clear', '--- Console Cleared ---', 0, 2);
+  }
+
+  function executeGenericCmd(cmd, msg) {
+    setTerminalOutput(cmd, `Executing shell target script: ${cmd}\nProcess ID allocated: 9021\nResult: OK`, 0, 48);
+    showToast(msg);
+  }
+
+  function fitScreenView() {
+    showToast('已自适应视口比例 (Fit 100%)');
+  }
+
+  function toggleFullscreen() {
+    showToast('投屏窗口全屏模式切换');
+  }
+
+  function resetAllOverrides() {
+    resetWmSizeAndDensity();
+    resetOrientation();
+    resetFoldState();
+    showToast('已重置所有模拟覆盖至设备出厂默认值', 'done_all');
+  }
+
+  setInterval(() => {
+    const fpsElem = document.getElementById('live-fps-counter');
+    if (fpsElem) {
+      const jitter = (59.8 + Math.random() * 0.4).toFixed(1);
+      fpsElem.textContent = jitter;
+    }
+  }, 1200);
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-8 z-50 bg-surface-container-lowest/95 backdrop-blur-md px-space-md flex items-center justify-between"><div class="flex items-center gap-space-md font-code-sm text-code-sm"><div class="flex items-center gap-space-xs text-on-surface"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><span>ADB Host: 127.0.0.1:5037</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">speed</span><span>Latency:</span><span class="text-primary">12ms</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">sync</span><span>Sync State: OK</span></div></div><div class="flex items-center gap-space-sm font-code-sm text-code-sm"><button class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">terminal</span><span>Log Console</span><span class="px-1 rounded bg-surface-container-high text-[10px] text-secondary">OPT+`</span></button><span class="text-outline-variant">|</span><span class="text-on-surface-variant">UTF-8</span><span class="text-outline-variant">|</span><span class="text-primary">SDK: 34</span></div></footer>
+
+</body></html>
