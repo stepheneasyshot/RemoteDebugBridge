@@ -14,6 +14,7 @@
 - 开始实施、选择下一项工作或更新进度：读 [实施路线图](docs/ROADMAP.md)，只推进当前步骤；完成条件满足后再更新状态。
 - 还原界面、检查原型差异：读 [设计来源说明](docs/design/README.md)，再打开对应页面原型。
 - 修改投屏、音频、输入控制、媒体传输或 scrcpy 版本：先读 [内嵌投屏调研](docs/research/scrcpy-embedding.md)，核对版本与尚未验证的假设。
+- 准备 scrcpy 资源、定位上游源码或配置 ADB：读 [开发资料与资源准备](docs/development/scrcpy-setup.md)，使用锁定清单与校验脚本。
 - 启动和构建命令：见 [README](README.md) 与 `package.json`，以实际配置为准。
 
 ## 保持架构简洁
