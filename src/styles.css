@@ -333,3 +333,6 @@ dialog .actions { justify-content: flex-end; }
 #wireless-dialog p { margin: 10px 0 0; font-size: 12px; }
 #wireless-dialog .result { color: var(--green); }
 #wireless-dialog .result.error-text { color: var(--error); }
+
+/* Shared application identity; rounded corners are in the image alpha. */
+.app-mark { display: block; width: 28px; height: 28px; flex: 0 0 28px; object-fit: contain; }

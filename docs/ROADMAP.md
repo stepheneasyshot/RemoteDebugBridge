@@ -138,3 +138,27 @@
 按用户截图删除屏幕比例下拉框，保留四个比例预设按钮、自定义宽高、应用尺寸与恢复默认入口。清理下拉框的回填、重置及事件绑定，比例按钮的即时应用和设备回读高亮继续保留，按钮组提供可访问名称。
 
 本轮修改 1 个代码文件（`workbench.ts`），按约束未编译。静态检查控件 ID 唯一、直接引用存在、删除控件无残留引用；`git diff --check` 通过。实际页面布局与比例操作待使用确认。
+
+#### macOS Universal release 打包：2026-11-13
+
+用户明确要求生成 M 系列与 Intel 通用 release 安装包，本轮执行所需编译。使用已安装的 `aarch64-apple-darwin` 与 `x86_64-apple-darwin`，运行 `npm run tauri -- build --target universal-apple-darwin --bundles app,dmg`，通过配置覆盖 `bundle.macOS.signingIdentity` 为 `-` 使用 ad-hoc 本地签名。前端 TypeScript/Vite 构建及两种 Rust release 构建全部通过。构建命令与产物目录已补充到 README。
+
+产物：`target/universal-apple-darwin/release/bundle/dmg/remote-debug-bridge_0.1.0_universal.dmg`，25,835,777 字节（约 24.64 MiB）；同目录生成 `.dmg.sha256`。SHA-256：`c066a134b5a8e7df4cc4ae5eaa799292be731c3e500c258dbf7b0c5b13e6e15d`。应用目录为 `target/universal-apple-darwin/release/bundle/macos/remote-debug-bridge.app`。
+
+验证：源资源锁定校验通过；主程序、包内 ADB 与 libc++ 均包含 arm64/x86_64；全部包内 ADB/scrcpy 文件与源资源字节一致。清空 PATH 后执行包内 ADB version 返回 37.0.1；`codesign --verify --deep --strict`、`hdiutil verify` 通过。只读挂载 DMG 检查通用应用、签名和 Applications 快捷入口通过，挂载随后已卸载。
+
+限制：当前没有可用 Developer ID 签名身份，未进行 Apple 公证，不作为已公证分发包。开发版仍运行，本轮未启动 release 应用或执行真机交互，未在 Intel 实机验证；此前功能与跨平台待验项目仍保留，本次打包不代表第 5 步全部验收完成。
+
+#### 统一应用图标：2026-11-13
+
+用户确认深蓝底、薄荷绿/青色、手机与连接桥的设计方向后，使用内置 imagegen 生成透明圆角图标，将原始 PNG 保存到 `assets/branding/`。通过 Tauri icon 转换并替换全部桌面图标，提供 PNG、ICO、ICNS 和 Windows Store 尺寸；生成页面用 PNG 与 favicon。欢迎页、设备页、工作台显示同一品牌图片，Tauri bundle 配置同时覆盖系统应用及默认窗口图标；未修改应用名称或标识。
+
+本轮修改 `index.html`、`layout.ts`、`styles.css` 及 Tauri 配置，另加入资源与文档；按不超过 5 个代码文件的约束，未编译、未打包。已查看生成图和 128px 图标，确认透明圆角及主体可辨；检查 PNG 尺寸/alpha、ICO 的 16–256px 多尺寸、ICNS 的 16–1024px 表示、资源路径和 favicon 副本。静态控件引用与 `git diff --check` 通过。
+
+现有 Universal DMG/.app 未重建，仍保留上一轮图标。待下次构建验证 macOS Dock/Finder、Windows/Linux 系统窗口与安装包图标，以及实际 Tauri 页面显示；本轮不将配置接入等同于产物验收。
+
+#### 新图标 macOS Universal release 重打包：2026-11-13
+
+按用户要求，使用当前新图标配置重新完成前端和 arm64/x86_64 release 构建，替换同路径 `target/universal-apple-darwin/release/bundle/dmg/remote-debug-bridge_0.1.0_universal.dmg`。新版大小 32,010,822 字节（约 30.53 MiB），SHA-256 为 `61751adc56682dbc2f57782351f9070093c02afd379855cacde58eba771589af`，旁置 `.sha256` 已同步更新。
+
+验证：DMG 完整性通过；只读挂载后依据 Info.plist 的 CFBundleIconFile 找到图标，与当前 `src-tauri/icons/icon.icns` 字节完全一致。主程序、内置 ADB、libc++ 均包含 arm64/x86_64；应用深度严格签名验证通过，Applications 快捷入口存在，检查后已卸载镜像。仍为 ad-hoc 本地签名、未 Apple 公证；本轮未启动应用进行真机验收。
