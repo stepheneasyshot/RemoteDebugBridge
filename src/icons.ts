@@ -11,6 +11,8 @@ const glyphs: Record<string, string> = {
   screenshot: "screenshot", reboot: "restart_alt", swipe: "swipe_vertical",
   homeSwipe: "vertical_align_top", shortSwipe: "arrow_upward", mediumSwipe: "north",
   longSwipe: "keyboard_double_arrow_up", leftBack: "swipe_right_alt", rightBack: "swipe_left_alt",
+  topSwipe: "vertical_align_bottom", shortSwipeDown: "arrow_downward",
+  mediumSwipeDown: "south", longSwipeDown: "keyboard_double_arrow_down",
   backThree: "fast_rewind", rotate: "screen_rotation", size: "aspect_ratio",
   restore: "settings_backup_restore", pointer: "touch_app", stats: "monitoring",
   clear: "clear_all", close: "close", memory: "memory", warning: "warning",
