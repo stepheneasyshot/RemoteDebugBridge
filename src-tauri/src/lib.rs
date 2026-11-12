@@ -1,5 +1,7 @@
 mod adb;
+mod command;
 mod scrcpy;
+mod workbench;
 
 use std::sync::atomic::{AtomicBool, Ordering};
 use tauri::Manager;
@@ -16,6 +18,9 @@ pub fn run() {
         }
     }));
     let app = builder
+        .setup(|app| adb::initialize(app.handle()))
+        .plugin(tauri_plugin_dialog::init())
+        .manage(workbench::WorkbenchState::default())
         .manage(scrcpy::MirrorState::default())
         .invoke_handler(tauri::generate_handler![
             scrcpy::list_devices,
@@ -23,6 +28,18 @@ pub fn run() {
             scrcpy::stop_mirror,
             scrcpy::acknowledge_media,
             scrcpy::send_input,
+            adb::check_environment,
+            adb::restart_adb,
+            adb::device_details,
+            adb::connect_wireless,
+            adb::pair_wireless,
+            workbench::set_workbench_target,
+            workbench::read_screen,
+            workbench::change_screen,
+            workbench::quick_action,
+            workbench::run_terminal,
+            workbench::cancel_terminal,
+            workbench::save_screenshot,
         ])
         .build(tauri::generate_context!())
         .expect("error while building tauri application");
@@ -32,7 +49,10 @@ pub fn run() {
         // Exit callback must finish cleanup before the runtime is torn down.
         if matches!(event, tauri::RunEvent::Exit) {
             let _ = tauri::async_runtime::block_on(async {
-                app.state::<scrcpy::MirrorState>().stop(None).await
+                {
+                    let _ = app.state::<workbench::WorkbenchState>().close().await;
+                    app.state::<scrcpy::MirrorState>().stop(None).await
+                }
             });
         }
         if let tauri::RunEvent::ExitRequested { api, .. } = event {
@@ -40,7 +60,10 @@ pub fn run() {
                 api.prevent_exit();
                 let app = app.clone();
                 tauri::async_runtime::spawn(async move {
-                    let _ = app.state::<scrcpy::MirrorState>().stop(None).await;
+                    let _ = {
+                        let _ = app.state::<workbench::WorkbenchState>().close().await;
+                        app.state::<scrcpy::MirrorState>().stop(None).await
+                    };
                     app.exit(0);
                 });
             }

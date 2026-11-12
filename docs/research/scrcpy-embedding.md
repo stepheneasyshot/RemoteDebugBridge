@@ -99,7 +99,7 @@ Tauri 官方明确普通 event 不适合高吞吐、低延迟数据；Channel �
 - 保留工作台内画面、声音、快捷控制与命令终端共存；内嵌音视频是首版关键技术风险，应前置验证。
 - 音频至少提供启停/静音与真实可用状态；部分 Android 版本或设备限制不能伪装为正常播放。
 - scrcpy 投屏只呈现设备实际画面。原型里的折叠铰链值、模拟双屏和 `cmd sensor mock-hinge` 不由上述通道自动实现，本次未验证这些命令，也不将它们列作通用设备能力。
-- 推荐打包固定 server 资源并保留 Apache-2.0 许可说明；ADB 可先使用本机路径配置，是否随包分发另行确定。[scrcpy LICENSE](https://github.com/Genymobile/scrcpy/blob/v5.0.1/LICENSE)
+- 推荐打包固定 server 资源并保留 Apache-2.0 许可说明；ADB 已按用户要求锁定官方 Platform-Tools 37.0.1 并随应用提供三平台资源，运行时使用内置绝对路径；资源来源、架构和准备命令见 [开发准备](../development/scrcpy-setup.md)。[scrcpy LICENSE](https://github.com/Genymobile/scrcpy/blob/v5.0.1/LICENSE)
 
 ## 客户端实现约定
 

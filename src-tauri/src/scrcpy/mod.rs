@@ -267,7 +267,14 @@ pub async fn start_mirror(
                 result = run_session(&app, &session, &mut resources, video, audio, input_rx) => result,
             }
         };
-        let warnings = resources.cleanup().await;
+        let mut warnings = resources.cleanup().await;
+        if let Err(error) = app
+            .state::<crate::workbench::WorkbenchState>()
+            .restore_device(&resources.serial)
+            .await
+        {
+            warnings.push(error);
+        }
         let cancelled = *session.cancel.borrow();
         match result {
             Err(error) if !cancelled => {

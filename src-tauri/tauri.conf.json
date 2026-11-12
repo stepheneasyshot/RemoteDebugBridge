@@ -30,7 +30,8 @@
     "resources": [
       "resources/scrcpy/manifest.json",
       "resources/scrcpy/scrcpy-server-v5.0.1",
-      "resources/scrcpy/LICENSE"
+      "resources/scrcpy/LICENSE",
+      "resources/adb/"
     ],
     "icon": [
       "icons/32x32.png",
